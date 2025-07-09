@@ -1,0 +1,182 @@
+.vision-section {
+  background-color: #fff;
+}
+
+.section-subtitle {
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.btn-learn {
+  background-color: #e1ff6c;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-learn .arrow-icon {
+  font-size: 1rem;
+  color: #5d3dfc;
+}
+
+.image-box {
+  position: relative;
+  display: flex;
+  z-index: 1;
+
+}
+
+
+.image-box img {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+
+
+/* founder note */
+
+
+.ceo-img-box {
+  height: 600px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ceo-img-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay container */
+.ceo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.75) 100%);
+}
+
+/* Top-left quote symbol */
+.ceo-quote {
+  font-size: 7rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Bottom heading text */
+.ceo-overlay-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+
+
+/* corevalues */
+
+.core-values-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Wrapper should be relative for positioning content */
+.core-values-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+
+}
+
+.core-values-image-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay content setup */
+.core-values-overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)); /* semi-transparent green */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Title in center initially */
+.core-values-overlay-title {
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 0;
+  transition: all 0.4s ease;
+}
+
+/* Hidden paragraph by default */
+.core-values-overlay-description {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  font-family: 'Source Sans 3', sans-serif;
+  margin-top: 15px;
+  text-align: center;
+  line-height: 22px;
+}
+
+
+/* Hover Effects */
+.core-values-image-wrapper:hover .core-values-overlay-title {
+  transform: translateY(-15px);
+}
+
+.core-values-image-wrapper:hover .core-values-overlay-content {
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)); 
+
+}
+
+.core-values-image-wrapper:hover .core-values-overlay-description {
+  opacity: 1;
+  max-height: 300px;
+
+}
+
+
+/* leadership */
+
+.founder-img-box {
+  height: 60vh;
+}
+
+.founder-img-box img{
+ height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}

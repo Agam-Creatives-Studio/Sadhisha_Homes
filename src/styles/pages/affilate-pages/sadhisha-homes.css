@@ -1,0 +1,11 @@
+.developmentFeaturesCard{
+width: 100%;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 0%;
+    border: 1px solid var(--gold);
+}

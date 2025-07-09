@@ -1,0 +1,52 @@
+/* Wrapper should be relative for positioning content */
+.career-benefits-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+
+.career-benefits-image-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay content setup */
+.career-benefits-overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)); /* semi-transparent green */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Title in center initially */
+.career-benefits-overlay-title {
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 0;
+  transition: all 0.4s ease;
+}
+
+
+
+/* Hover Effects */
+
+
+.career-benefits-image-wrapper:hover .career-benefits-overlay-content {
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)); 
+}
+
+@media (max-width:768px) {
+  .apply-btn{
+  font-size: 12px;
+}
+}
+

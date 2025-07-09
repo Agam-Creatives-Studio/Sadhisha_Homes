@@ -1,0 +1,76 @@
+/* Newsletter Form Container */
+.news-letter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid #dbd9d9;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  max-width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap; /* Ensures wrapping on small screens */
+  padding: 5px;
+  gap: 0;
+}
+
+/* Highlight on focus */
+.news-letter-form:focus-within {
+  outline: 1px solid var(--green);
+}
+
+/* Input Field */
+.news-letter-form .message-input {
+  border: none;
+  outline: none;
+  background: none;
+  height: 45px;
+  width: 100%;
+  max-width: 400px;
+  padding: 0 15px;
+  font-size: 16px;
+  flex: 1;
+}
+
+/* Subscribe Button */
+.news-letter-form button {
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 12px 20px;
+  background-color: var(--green);
+  border: 1px solid var(--black);
+  border-left: none;
+  border-radius: 0px 12px 12px 0px;
+  color: var(--white);
+  white-space: nowrap;
+  flex-shrink: 0;
+  height: 45px;
+}
+
+/* Rounded input left side */
+.news-letter-form .message-input {
+  border-radius: 12px 0 0 12px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 576px) {
+  .news-letter-form {
+    flex-direction: column;
+    padding: 0;
+    border-radius: 12px;
+  }
+
+  .news-letter-form .message-input {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    padding: 12px;
+  }
+
+  .news-letter-form button {
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    padding: 12px;
+    border-left: 1px solid var(--black);
+    border-top: none;
+  }
+}
