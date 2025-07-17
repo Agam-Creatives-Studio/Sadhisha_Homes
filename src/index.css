@@ -79,7 +79,7 @@ p{
 .titleGreen {
     font-size: 64px;
     color: var(--title-black);
-      text-transform: uppercase;
+      text-transform: capitalize;
 }
 
 .titleWhite {
@@ -111,7 +111,7 @@ p{
 .secTitleBlack,
 .secTitleWhite,
 .secTitleGreen {
-     text-transform: uppercase;
+     text-transform: capitalize;
     font-size: 36px;
     color: var(--section-title-black);
 }
@@ -208,6 +208,8 @@ p{
 
 .titleAnimated span,
 .titleAnimated div,
+.subTitleAnimated span,
+.subTitleAnimated div,
 .paraAnimated span,
 .paraAnimated div {
   display: inline-block;
@@ -364,6 +366,7 @@ a,
 /* ------------------Background Sections------------------- */
 .bgGreen {
     background-color: var(--bg-green);
+    
 }
 
 .bgWhite {

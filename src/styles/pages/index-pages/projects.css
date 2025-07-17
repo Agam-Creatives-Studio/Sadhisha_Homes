@@ -79,3 +79,36 @@
     margin-bottom: 0.5rem;
   }
 }
+
+
+/* Projects Page: Fixed Map & Scrollable Property List */
+
+/* Wrapper row should be full height */
+.projects-page-row {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* Left column: static map */
+.projects-map-col {
+  height: 100%;
+  position: sticky;
+  top: 0;
+  padding: 0;
+}
+
+/* Right column: scrollable cards */
+.projects-list-col {
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* Internet Explorer 10+ */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Hide scrollbar in WebKit (Chrome, Safari) */
+.projects-list-col::-webkit-scrollbar {
+  display: none;
+}

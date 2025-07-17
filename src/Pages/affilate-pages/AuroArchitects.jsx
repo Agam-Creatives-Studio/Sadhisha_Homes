@@ -6,16 +6,6 @@ import GeneralEnquiryForm from '../../Components/Forms/GeneralEnquiryForm';
 
 import AuroLogo from '../../assets/images/common/AURO ARCHITECTS/1.png';
 
-import {
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-  FaLocationArrow,
-} from 'react-icons/fa';
 import ContactDetails from '../../Components/index-pages/ContactDetails';
 
 const AuroArchitects = () => {

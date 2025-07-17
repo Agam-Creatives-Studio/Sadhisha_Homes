@@ -19,7 +19,7 @@ const FlyToProperty = ({ lat, lng }) => {
   const map = useMap();
   useEffect(() => {
     if (lat && lng) {
-      map.flyTo([lat, lng], 13, { duration: 1.5 });
+      map.flyTo([lat, lng], 8, { duration: 1.5 });
     }
   }, [lat, lng]);
   return null;
@@ -31,7 +31,7 @@ const ProjectsMapContainer = ({ properties = [], hovered }) => {
   return (
     <MapContainer
       center={center}
-      zoom={7}
+      zoom={2}
       style={{ height: '90vh', width: '100%', borderRadius: '10px' }}
       scrollWheelZoom={false}
     >

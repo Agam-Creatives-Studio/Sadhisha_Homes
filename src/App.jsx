@@ -33,6 +33,10 @@ import SadhishaRapidEdge from './Pages/affilate-pages/SadhishaRapidEdge';
 import SadhishaRealty from './Pages/affilate-pages/SadhishaRealty';
 import SadhishaInteriors from './Pages/affilate-pages/SadhishaInteriors';
 import ExtellNavbar from './Components/common/tests/ExtellNavbar';
+import ThanksPage from './Pages/thanks-and-error-pages/ThanksPage';
+import NotFoundPage from './Pages/thanks-and-error-pages/NotFoundPage';
+import TitleReveal from './styles/pages/test/TitleReveal';
+import SingleProjectPage from './Pages/index-pages/SingleProjectPage';
 
 function App() {
 
@@ -45,6 +49,7 @@ function App() {
         <Route path='/availabilty' element={<Availability />} />
         <Route path='/investor-club' element={<InvestorClub />} />
         <Route path='/projects' element={<Projects />} />
+        <Route path='/projects/:slug' element={<SingleProjectPage/>} />
         <Route path='/services' element={<Services />} />
 
         <Route path='/auro-architects' element={<AuroArchitects />} />
@@ -65,6 +70,9 @@ function App() {
 
 
         <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
+        <Route path='/thank-you' element={<ThanksPage/>} />
+        <Route path='*' element={<NotFoundPage/>} />
+        <Route path='/test' element={<TitleReveal/>} />
 
       </Routes>
       <Footer />

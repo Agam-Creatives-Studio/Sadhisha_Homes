@@ -15,8 +15,8 @@ const InvestorClub = () => {
   // GSAP SplitText animation
   useGSAP(() => {
     const title = document.querySelector('.titleAnimated');
-    const subtitle = document.querySelector('.paraAnimated');
-    const para = document.querySelector('.paraBlack');
+    const subtitle = document.querySelector('.subTitleAnimated');
+    const para = document.querySelector('.paraAnimated');
 
     if (title) {
       const titleSplit = new SplitText(title, { type: 'chars' });
@@ -42,14 +42,14 @@ const InvestorClub = () => {
       });
     }
     if (para) {
-      const subtitleSplit = new SplitText(subtitle, { type: 'lines' });
-      gsap.from(subtitleSplit.lines, {
+      const paraSplit = new SplitText(para, { type: 'lines' });
+      gsap.from(paraSplit.lines, {
         y: 50,
         opacity: 0,
         duration: 1.4,
         ease: 'power2.out',
         stagger: 0.1,
-        delay: 1,
+        delay: 1.2,
       });
     }
   }, []);
@@ -89,11 +89,11 @@ const InvestorClub = () => {
               <div className="overflow-hidden">
                 <h2 className=" titleAnimated secTitleGreen text-md-start text-center">Investor Club</h2>
               </div>
-              <p className=" paraAnimated subParaTextGreen text-uppercase mb-md-4 mb-2 text-md-start text-center">
+              <p className=" subTitleAnimated subParaTextGreen text-uppercase mb-md-4 mb-2 text-md-start text-center">
                 Global Vision, Local Expertise
               </p>
 
-              <p className=" paraBlack mt-3">
+              <p className="paraAnimated paraBlack mt-3">
                 At Sadhisha, we help you navigate your property investment journey with confidence and clarity.
                 Whether you're exploring promising land opportunities in Puducherry or top-tier residential and
                 commercial projects in Chennai, or India or Worldwide — our experts are here to guide you.

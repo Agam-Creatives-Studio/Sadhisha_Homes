@@ -21,6 +21,7 @@ import {
 import { Link } from 'react-router-dom';
 import GeneralEnquiryForm from '../../Components/Forms/GeneralEnquiryForm';
 import ContactDetails from '../../Components/index-pages/ContactDetails';
+import CareerEnquiryForm from '../../Components/Forms/CareerEnquiryForm';
 
 
 
@@ -183,7 +184,7 @@ const Careers = () => {
                     Just Say Hello, Our Team Will Reach You as Soon as Possible
                   </p>
                 </div>
-                <GeneralEnquiryForm />
+                <CareerEnquiryForm />
               </div>
             </div>
 

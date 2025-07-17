@@ -353,12 +353,16 @@ const About = () => {
             <h2 className="secTitleWhite text-center"> OUR Leadership</h2>
           </div>
 
-          <div className="row justify-content-center d-flex pb-md-5 py-2">
-            <h4 className="subTitleWhite mb-md-2 mb-2 fs-2 text-center"> Bipin Rananaware</h4>
-            <p className="  subParaTextWhite text-uppercase mb-md-4 mb-2 text-center"   > Founder-Chairman, Sadhisha</p>
-
+          <div className="row justify-content-center d-flex  py-2">
+            
             <div className="founder-img-box w-100">
               <img src={CEO} alt="" />
+            </div>
+
+            <div className="pt-4">
+              <h4 className="subTitleWhite mb-md-2 mb-2 fs-2 text-center"> Bipin Rananaware</h4>
+            <p className="  subParaTextWhite text-uppercase mb-md-4 mb-2 text-center"   > Founder-Chairman, Sadhisha</p>
+
             </div>
 
           </div>
