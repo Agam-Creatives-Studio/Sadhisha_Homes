@@ -1,0 +1,112 @@
+.purpleproperties-icon-cards {
+  position: relative;
+  width: 90vw;
+  height: 40vw;
+  max-width: 480px;
+  max-height: 300px;
+  margin: 0 auto;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.purpleproperties-icon-cards__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: translateZ(-35vw) rotateY(0deg);
+}
+
+.purpleproperties-icon-cards__content.step-animation {
+  animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.purpleproperties-icon-cards__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60vw;
+  height: 40vw;
+  max-width: 480px;
+  max-height: 300px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transform-origin: center;
+}
+
+.purpleproperties-icon-cards__item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.purpleproperties-icon-cards__item:nth-child(1) {
+  transform: rotateY(0deg) translateZ(35vw);
+}
+.purpleproperties-icon-cards__item:nth-child(2) {
+  transform: rotateY(120deg) translateZ(35vw);
+}
+.purpleproperties-icon-cards__item:nth-child(3) {
+  transform: rotateY(240deg) translateZ(35vw);
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateZ(-35vw) rotateY(0deg);
+  }
+  20% {
+    transform: translateZ(-35vw) rotateY(0deg);
+  }
+  30% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+  50% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+  60% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+  80% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+  100% {
+    transform: translateZ(-35vw) rotateY(-360deg);
+  }
+}
+
+.purpleproperties-overlay-text {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+
+  text-align: center;
+  z-index: 2;
+}
+
+.purpleproperties-overlay-text h6.subTitleWhite {
+  margin: 0;
+
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+}
+
+.purpleproperties-overlay-text p.paraWhite {
+  margin: 5px 0 0;
+ 
+  color: #ddd;
+  position: relative;
+}

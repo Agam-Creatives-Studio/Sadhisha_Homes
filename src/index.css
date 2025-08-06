@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+/* ------------------Variables START------------------- */
+:root {
+    --green: #032E1D;
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-green: #E6FFF5;
+    --gold:#FABD7E;
+    --hr-ash: rgb(177, 174, 174);
+
+    --title-black: var(--black);
+    --title-white: var(--white);
+    --title-green: var(--green);
+
+    --section-title-black: var(--black);
+    --section-title-white: var(--white);
+    --section-title-green: var(--green);
+
+    --subtitle-black: var(--black);
+    --subtitle-white: var(--white);
+    --subtitle-green: var(--green);
+
+    --bg-green: var(--green);
+    --bg-white: var(--white);
+    --bg-black: var(--black);
+    --bg-light-green: var(--light-green)
+
+}
+
+/* ------------------Reset & Fonts START------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    font-family: 'Kanit', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth; 
+}
+
+/* ------------------Typography------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+     font-family: 'Libre Baskerville', serif;
+     font-weight: 700;
+    
+}
+
+p,
+li,
+a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    text-align: justify;
+}
+
+p{
+    line-height: 25px;
+}
+
+
+
+/* Responsive Font Sizes */
+.titleBlack,
+.titleWhite,
+.titleGreen {
+    font-size: 64px;
+    color: var(--title-black);
+      text-transform: capitalize;
+}
+
+.titleWhite {
+    color: var(--title-white);
+}
+
+.titleGreen {
+    color: var(--title-green);
+}
+
+@media (max-width: 1199px) {
+
+    .titleBlack,
+    .titleWhite,
+    .titleGreen {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .titleBlack,
+    .titleWhite,
+    .titleGreen {
+        font-size: 36px;
+    }
+}
+
+.secTitleBlack,
+.secTitleWhite,
+.secTitleGreen {
+     text-transform: capitalize;
+    font-size: 36px;
+    color: var(--section-title-black);
+}
+
+.secTitleWhite {
+    color: var(--section-title-white);
+}
+
+.secTitleGreen {
+    color: var(--section-title-green);
+}
+
+.secTitleGold{
+    color: var(--gold);
+}
+
+@media (max-width: 1199px) {
+
+    .secTitleBlack,
+    .secTitleWhite,
+    .secTitleGreen {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .secTitleBlack,
+    .secTitleWhite,
+    .secTitleGreen {
+        font-size: 24px;
+    }
+}
+
+.subTitleBlack,
+.subTitleWhite,
+.subTitleGreen {
+    font-size: 24px;
+    color: var(--subtitle-black);
+}
+
+.subTitleWhite {
+    color: var(--subtitle-white);
+}
+
+.subTitleGreen {
+    color: var(--subtitle-green);
+}
+
+.subTitleGold {
+    color: var(--gold);
+}
+
+@media (max-width: 1199px) {
+
+    .subTitleBlack,
+    .subTitleWhite,
+    .subTitleGreen {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .subTitleBlack,
+    .subTitleWhite,
+    .subTitleGreen {
+        font-size: 18px;
+    }
+}
+
+.paraWhite {
+    color: var(--subtitle-white);
+}
+
+.paraBlack {
+    color: var(--subtitle-black);
+}
+
+.paraGreen {
+    color: var(--subtitle-green);
+}
+
+.subParaTextWhite{
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--white);
+}
+.subParaTextGreen{
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--green);
+}
+
+.titleAnimated span,
+.titleAnimated div,
+.subTitleAnimated span,
+.subTitleAnimated div,
+.paraAnimated span,
+.paraAnimated div {
+  display: inline-block;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+@media (max-width:425px) {
+    .subParaTextWhite{
+    font-size: 12px;
+     letter-spacing: 3px;
+}
+   .subParaTextGreen{
+    font-size: 12px;
+     letter-spacing: 3px;
+}
+}
+
+p,
+li,
+a,
+.paraWhite,
+.paraBlack,
+.paraGreen {
+    font-size: 16px;
+}
+
+@media (max-width: 1199px) {
+
+    p,
+    li,
+    a,
+    .paraWhite,
+    .paraBlack,
+    .paraGreen {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    p,
+    li,
+    a,
+    .paraWhite,
+    .paraBlack,
+    .paraGreen {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .para1,
+    .para2,
+    .paraBlack,
+    .paraWhite {
+        text-align: justify;
+    }
+}
+
+.hrTag {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  margin: 10px 0;
+  opacity: 1;
+  border: none;
+}
+
+
+/* padding and margin */
+
+.p-25{
+    padding: 25px;
+}
+
+.p-50{
+    padding: 50px;
+}
+
+.p-75{
+    padding: 75px;
+}
+
+.p-100{
+    padding: 100px;
+}
+
+.pt-25{
+    padding-top: 25px;
+}
+
+.pt-50{
+    padding-top: 50px;
+}
+
+.pt-75{
+    padding-top: 75px;
+}
+
+.pt-100{
+    padding-top: 100px;
+}
+
+
+.pb-25{
+    padding-bottom: 25px;
+}
+
+.pb-50{
+    padding-bottom: 50px;
+}
+
+.pb-75{
+    padding-bottom: 75px;
+}
+
+.pb-100{
+    padding-bottom: 100px;
+}
+
+.px-25{
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.px-50{
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.px-75{
+    padding-right: 75px;
+    padding-left: 75px;
+}
+
+.px-100{
+   padding-right: 100px;
+    padding-left: 100px;
+}
+
+
+
+/* ------------------Background Sections------------------- */
+.bgGreen {
+    background-color: var(--bg-green);
+    
+}
+
+.bgWhite {
+    background-color: var(--bg-white);
+}
+
+.bgBlack {
+    background-color: var(--bg-black);
+}
+
+.bgLightGreen{
+    background-color: var(--light-green);
+}
+
+/* ------------------Custom Flex Alignment Utilities------------------- */
+/* Flex Row Utilities */
+.flex-row-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-row-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.flex-row-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-row-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flex-row-evenly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Row with Alignment */
+.flex-row-align-start {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.flex-row-align-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-row-align-end {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+/* Full Center Row */
+.flex-row-center-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flex Column Utilities */
+.flex-col-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-col-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Full Center Column */
+.flex-col-center-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flex Wrapping */
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+/* Spacing Between Items */
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-30 {
+    gap: 30px;
+}
+
+/* ------------------Preloader------------------- */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+    overflow: hidden;
+}
+
+#preloader img {
+    width: 100px;
+    animation: zoomInOut 2.5s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+/* ------------------Layout Classes------------------- */
+.page {
+    width: 100%;
+    padding: 20px;
+}
+
+.section {
+    width: 100%;
+    padding: 60px 20px;
+}
+
+.header {
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.subHeader {
+    width: 100%;
+    padding: 10px 25px;
+}

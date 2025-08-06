@@ -1,0 +1,77 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  max-height: 500px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  max-height: 500px;
+}
+
+.hexagon-card {
+  width: 350px;
+  /* increased width */
+  height: 300px;
+  /* increased height */
+  background: var(--green);
+  position: relative;
+  margin-top: 90px;
+  /* adjusted for larger triangle */
+  text-align: center;
+  color: white;
+  font-family: Georgia, serif;
+  border: none;
+}
+
+.hexagon-card::before,
+.hexagon-card::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.hexagon-card::before {
+  top: -90px;
+  /* match triangle height */
+  border-left: 150px solid transparent;
+  /* 300 / 2 */
+  border-right: 150px solid transparent;
+  border-bottom: 90px solid var(--green);
+}
+
+.hexagon-card::after {
+  bottom: -90px;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 90px solid var(--green);
+}
+
+.hexagon-card-content {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.normal-specialization-card{
+  display: none;
+}
+@media (min-width:765px) and (max-width:1109px) {
+
+  .hexagon-card {
+    display: none;
+  }
+
+  .normal-specialization-card{
+  display: block;
+}
+  
+}

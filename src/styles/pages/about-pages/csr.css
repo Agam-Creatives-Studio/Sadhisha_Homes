@@ -1,0 +1,8 @@
+.contact-card{
+    border: 1px solid var(--green);
+    padding: 25px 25px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}

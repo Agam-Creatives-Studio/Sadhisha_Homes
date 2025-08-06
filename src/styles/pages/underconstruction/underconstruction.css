@@ -1,0 +1,31 @@
+/* src/components/UnderConstruction.css */
+
+.construction-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  text-align: center;
+  flex-direction: column;
+}
+
+.construction-message h1 {
+  font-size: 3rem;
+  color: #ff4500;
+  margin-bottom: 1rem;
+}
+
+.construction-message p {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.construction-image img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
