@@ -11,7 +11,6 @@ const CareerEnquiryForm = () => {
       <input type="text" name="name" placeholder="Name" required />
       <input type="email" name="email" placeholder="Email" required />
       <input type="tel" name="mobile" placeholder="Phone" required />
-       <input type="file" name="attachment" accept=".pdf" />
       <textarea name="message" placeholder="Message" rows="4" required></textarea>
       <button type="submit" className='btn green-btn'>
         Submit Enquiry

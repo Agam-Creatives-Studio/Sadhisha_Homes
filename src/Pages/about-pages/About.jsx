@@ -179,7 +179,7 @@ const About = () => {
         <Section>
           <div className="row align-items-center justify-content-between">
             <div className="d-md-none d-block mb-3">
-              <h2 className="secTitleGreen fs-1 text-md-start text-center text-capitalize">Message From Chairman</h2>
+              <h2 className="secTitleGreen fs-1 text-md-start text-center text-uppercase">Message From Chairman</h2>
               <p className="subParaTextGreen text-uppercase mb-md-4 mb-2 text-md-start text-center"   >From Years of Industry Expertise   </p>
 
             </div>
@@ -350,7 +350,7 @@ const About = () => {
       <div className='bgGreen px-md-0 px-2'>
         <Section>
           <div className='mb-md-4 mb-3 row flex-row-center'>
-            <h2 className="secTitleWhite text-center"> OUR Leadership</h2>
+            <h2 className="secTitleWhite text-center"> OUR LEADERSHIP</h2>
           </div>
 
           <div className="row justify-content-center d-flex  py-2">
@@ -442,7 +442,7 @@ const About = () => {
             {/* Right Side Image & Badge */}
 
             <div className="d-md-none d-block">
-              <h2 className="secTitleGreen text-md-start text-center">Life at Sadhisha</h2>
+              <h2 className="secTitleGreen text-md-start text-center">LIFE AT SADHISHA</h2>
               <p className="subParaTextGreen text-uppercase mb-md-4 mb-2 text-md-start text-center"   >People First, always</p>
 
             </div>
@@ -451,7 +451,7 @@ const About = () => {
             <div className="col-md-5 mb-4 mb-md-0 order-md-1 order-2">
 
               <div className="d-md-block d-none">
-                <h2 className="secTitleGreen text-md-start text-center">Life at Sadhisha</h2>
+                <h2 className="secTitleGreen text-md-start text-center">LIFE AT SADHISHA</h2>
                 <p className="subParaTextGreen text-uppercase mb-md-4 mb-2 text-md-start text-center"   >People First, always</p>
 
               </div>
@@ -525,7 +525,7 @@ const About = () => {
       <div className='bgWhite px-md-0 px-2 py-md-0 py-3'>
         <Section>
           <div className='mb-md-4 mb-5 row flex-row-center'>
-            <h2 className="secTitleGreen mb-md-3 mb-2 text-center"> OUR Companies </h2>
+            <h2 className="secTitleGreen mb-md-3 mb-2 text-center"> OUR COMPANIES </h2>
             <p className="subParaTextGreen text-uppercase mb-md-4 mb-2  text-center"   >  Integrated Strength. Unified Vision. </p>
 
 

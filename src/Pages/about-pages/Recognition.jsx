@@ -33,7 +33,7 @@ const Recognition = () => {
                 <div className='bgWhite'>
                     <Section>
 
-                        <h2 className="secTitleGreen mb-md-3 text-center"> Our Recognition </h2>
+                        <h2 className="secTitleGreen mb-md-3 text-center text-uppercase"> Our Recognition </h2>
                         <p className="subParaTextGreen text-uppercase mb-md-4 mb-2  text-center"   > Recognized for Excellence and Trust</p>
 
                         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">

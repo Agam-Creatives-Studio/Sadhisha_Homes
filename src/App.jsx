@@ -11,7 +11,6 @@ import SplitText from 'gsap/SplitText';
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 
-import Navbar from './Components/common/Navbar';
 import Footer from './Components/common/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/index-pages/Home';
@@ -32,11 +31,11 @@ import SadhishaHomes from './Pages/affilate-pages/SadhishaHomes';
 import SadhishaRapidEdge from './Pages/affilate-pages/SadhishaRapidEdge';
 import SadhishaRealty from './Pages/affilate-pages/SadhishaRealty';
 import SadhishaInteriors from './Pages/affilate-pages/SadhishaInteriors';
-import ExtellNavbar from './Components/common/tests/ExtellNavbar';
 import ThanksPage from './Pages/thanks-and-error-pages/ThanksPage';
 import NotFoundPage from './Pages/thanks-and-error-pages/NotFoundPage';
 import TitleReveal from './styles/pages/test/TitleReveal';
 import SingleProjectPage from './Pages/index-pages/SingleProjectPage';
+import ExtellNavbar from './Components/common/ExtellNavbar';
 
 function App() {
 

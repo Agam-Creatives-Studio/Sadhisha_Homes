@@ -86,3 +86,48 @@ border-radius: 3px;
 .dropdown-menu li a:focus{
   color: var(--gold);
 }
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 10px;
+  }
+  .navbar .nav-link {
+  color: var(--green) !important;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+.offcanvas {
+  height: 100vh !important;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.offcanvas-body {
+  overflow-y: auto;
+  height: calc(100vh - 60px); /* adjust depending on your header/buttons */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+  .navbar-brand {
+    margin-left: 10px;
+  }
+
+  .offcanvas-body {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  .dropdown-menu {
+    position: static !important;
+    float: none;
+    box-shadow: none;
+    border: none;
+    padding-left: 10px;
+  }
+}
+
