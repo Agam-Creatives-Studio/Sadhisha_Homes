@@ -4,7 +4,7 @@ const GeneralEnquiryForm = () => {
   return (
     <form
       method="POST"
-      action="http://localhost/sadhisha-homes-backend/form-handler/General-enquiry-form.php"
+      action="https://agamcreatives.site/sadhisha-test/form-handler/General-enquiry-form.php"
       className="general-enquiry-form"
     >
       <input type="text" name="name" placeholder="Name" required />

@@ -10,29 +10,39 @@ const ExtellNavbar = () => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isJoinOpen, setIsJoinOpen] = useState(false);
 
-  const handleDropdown = (setter) => ({
-    onMouseEnter: () => window.innerWidth >= 992 && setter(true),
-    onMouseLeave: () => window.innerWidth >= 992 && setter(false),
-    onClick: (e) => {
-      if (window.innerWidth < 992) {
-        e.preventDefault();
-        setter((prev) => !prev);
-      }
-    },
-    onItemClick: () => window.innerWidth >= 992 && setter(false),
-  });
-
-  const affiliates = handleDropdown(setIsAffiliatesOpen);
-  const about = handleDropdown(setIsAboutOpen);
-  const join = handleDropdown(setIsJoinOpen);
-
-  const handleNavClick = (e, path, onItemClick) => {
+  const handleNavClick = (e, path, closeDropdown) => {
     e.preventDefault();
-    if (onItemClick) onItemClick();
-    document.querySelector('.offcanvas.show')?.classList.remove('show'); // close offcanvas manually
-    document.body.classList.remove('offcanvas-backdrop');
+    if (closeDropdown) closeDropdown();
+
+    // Close offcanvas menu on mobile using Bootstrap's JS API
+    const offcanvasElement = document.getElementById('offcanvasNavbar');
+    if (offcanvasElement && window.bootstrap) {
+      const offcanvasInstance = window.bootstrap.Offcanvas.getInstance(offcanvasElement);
+      if (offcanvasInstance) {
+        offcanvasInstance.hide();
+      }
+    }
+
     navigate(path);
   };
+
+  const getDropdownHandlers = (setOpen) => ({
+    onMouseEnter: () => window.innerWidth >= 992 && setOpen(true),
+    onMouseLeave: () => window.innerWidth >= 992 && setOpen(false),
+    onClickToggle: (e) => {
+      if (window.innerWidth < 992) {
+        e.preventDefault();
+        setOpen(prev => !prev);
+      }
+    },
+    close: () => {
+      if (window.innerWidth >= 992) setOpen(false);
+    }
+  });
+
+  const affiliates = getDropdownHandlers(setIsAffiliatesOpen);
+  const about = getDropdownHandlers(setIsAboutOpen);
+  const join = getDropdownHandlers(setIsJoinOpen);
 
   return (
     <nav className="navbar sticky-top navbar-expand-lg d-flex justify-content-center"
@@ -54,22 +64,33 @@ const ExtellNavbar = () => {
             <button type="button" className="btn-close ms-auto mt-3 me-3 d-lg-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 
             <ul className="navbar-nav gap-3">
+
               <li className="nav-item">
-                <a href="/" className="nav-link" data-bs-dismiss="offcanvas" onClick={(e) => handleNavClick(e, "/")}>Home</a>
-              </li>
-              <li className="nav-item">
-                <a href="/projects" className="nav-link" data-bs-dismiss="offcanvas" onClick={(e) => handleNavClick(e, "/projects")}>Projects</a>
-              </li>
-              <li className="nav-item">
-                <a href="https://agamcreatives.site/ongoing-projects/" className="nav-link" >Ongoing Projects</a>
+                <a href="/" className="nav-link" onClick={(e) => handleNavClick(e, "/")}>Home</a>
               </li>
 
-              {/* Dropdown - Our Companies */}
-              <li className={`nav-item dropdown ${isAffiliatesOpen ? "show" : ""}`} {...affiliates}>
-                <span className={`nav-link dropdown-toggle ${isAffiliatesOpen ? "show" : ""}`}
-                  role="button" aria-expanded={isAffiliatesOpen} onClick={affiliates.onClick}>
+              <li className="nav-item">
+                <a href="/projects" className="nav-link" onClick={(e) => handleNavClick(e, "/projects")}>Projects</a>
+              </li>
+
+              <li className="nav-item">
+                <a href="https://agamcreatives.site/ongoing-projects/" className="nav-link" target="_blank" rel="noreferrer">Ongoing Projects</a>
+              </li>
+
+              {/* Our Companies Dropdown */}
+              <li
+                className={`nav-item dropdown ${isAffiliatesOpen ? "show" : ""}`}
+                onMouseEnter={affiliates.onMouseEnter}
+                onMouseLeave={affiliates.onMouseLeave}
+              >
+                <a
+                  href="#"
+                  className={`nav-link dropdown-toggle ${isAffiliatesOpen ? "show" : ""}`}
+                  onClick={affiliates.onClickToggle}
+                  aria-expanded={isAffiliatesOpen}
+                >
                   Our Companies
-                </span>
+                </a>
                 <ul className={`dropdown-menu ${isAffiliatesOpen ? "show" : ""}`}>
                   {[
                     { path: "/sadhisha-realty", label: "Sadhisha Realty" },
@@ -80,46 +101,66 @@ const ExtellNavbar = () => {
                     { path: "/sadhisha-interiors", label: "Sadhisha Interiors" },
                   ].map(({ path, label }) => (
                     <li key={path}>
-                      <a href={path} className="dropdown-item" data-bs-dismiss="offcanvas"
-                        onClick={(e) => handleNavClick(e, path, affiliates.onItemClick)}>{label}</a>
+                      <a className="dropdown-item" href={path} onClick={(e) => handleNavClick(e, path, affiliates.close)}>
+                        {label}
+                      </a>
                     </li>
                   ))}
                 </ul>
               </li>
 
-              {/* Investor Club */}
               <li className="nav-item">
-                <a href="/investor-club" className="nav-link" data-bs-dismiss="offcanvas"
-                  onClick={(e) => handleNavClick(e, "/investor-club")}>Investor Club</a>
+                <a href="/investor-club" className="nav-link" onClick={(e) => handleNavClick(e, "/investor-club")}>Investor Club</a>
               </li>
 
-              {/* Dropdown - About */}
-              <li className={`nav-item dropdown ${isAboutOpen ? "show" : ""}`} {...about}>
-                <span className={`nav-link dropdown-toggle ${isAboutOpen ? "show" : ""}`}
-                  role="button" aria-expanded={isAboutOpen} onClick={about.onClick}>
+              {/* About Dropdown */}
+              <li
+                className={`nav-item dropdown ${isAboutOpen ? "show" : ""}`}
+                onMouseEnter={about.onMouseEnter}
+                onMouseLeave={about.onMouseLeave}
+              >
+                <a
+                  href="#"
+                  className={`nav-link dropdown-toggle ${isAboutOpen ? "show" : ""}`}
+                  onClick={about.onClickToggle}
+                  aria-expanded={isAboutOpen}
+                >
                   About
-                </span>
+                </a>
                 <ul className={`dropdown-menu ${isAboutOpen ? "show" : ""}`}>
-                  <li><a href="/about" className="dropdown-item" data-bs-dismiss="offcanvas"
-                    onClick={(e) => handleNavClick(e, "/about", about.onItemClick)}>About Us</a></li>
-                  <li><a href="/recognition" className="dropdown-item" data-bs-dismiss="offcanvas"
-                    onClick={(e) => handleNavClick(e, "/recognition", about.onItemClick)}>Awards & Recognition</a></li>
-                  <li><a href="/corprate-social-responsibility" className="dropdown-item" data-bs-dismiss="offcanvas"
-                    onClick={(e) => handleNavClick(e, "/corprate-social-responsibility", about.onItemClick)}>CSR</a></li>
+                  <li>
+                    <a href="/about" className="dropdown-item" onClick={(e) => handleNavClick(e, "/about", about.close)}>About Us</a>
+                  </li>
+                  <li>
+                    <a href="/recognition" className="dropdown-item" onClick={(e) => handleNavClick(e, "/recognition", about.close)}>Awards & Recognition</a>
+                  </li>
+                  <li>
+                    <a href="/corprate-social-responsibility" className="dropdown-item" onClick={(e) => handleNavClick(e, "/corprate-social-responsibility", about.close)}>CSR</a>
+                  </li>
                 </ul>
               </li>
 
-              {/* Dropdown - Join */}
-              <li className={`nav-item dropdown ${isJoinOpen ? "show" : ""}`} {...join}>
-                <span className={`nav-link dropdown-toggle ${isJoinOpen ? "show" : ""}`}
-                  role="button" aria-expanded={isJoinOpen} onClick={join.onClick}>
+              {/* Join Dropdown */}
+              <li
+                className={`nav-item dropdown ${isJoinOpen ? "show" : ""}`}
+                onMouseEnter={join.onMouseEnter}
+                onMouseLeave={join.onMouseLeave}
+              >
+                <a
+                  href="#"
+                  className={`nav-link dropdown-toggle ${isJoinOpen ? "show" : ""}`}
+                  onClick={join.onClickToggle}
+                  aria-expanded={isJoinOpen}
+                >
                   Join
-                </span>
+                </a>
                 <ul className={`dropdown-menu ${isJoinOpen ? "show" : ""}`}>
-                  <li><a href="/careers" className="dropdown-item" data-bs-dismiss="offcanvas"
-                    onClick={(e) => handleNavClick(e, "/careers", join.onItemClick)}>Careers</a></li>
-                  <li><a href="/channel-partners" className="dropdown-item" data-bs-dismiss="offcanvas"
-                    onClick={(e) => handleNavClick(e, "/channel-partners", join.onItemClick)}>Channel Partners</a></li>
+                  <li>
+                    <a href="/careers" className="dropdown-item" onClick={(e) => handleNavClick(e, "/careers", join.close)}>Careers</a>
+                  </li>
+                  <li>
+                    <a href="/channel-partners" className="dropdown-item" onClick={(e) => handleNavClick(e, "/channel-partners", join.close)}>Channel Partners</a>
+                  </li>
                 </ul>
               </li>
 
