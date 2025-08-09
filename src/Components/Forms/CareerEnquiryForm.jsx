@@ -4,7 +4,7 @@ const CareerEnquiryForm = () => {
   return (
     <form
       method="POST"
-      action="https://agamcreatives.site/sadhisha-test/form-handler/Career-enquiry-form.php"
+      action="https://crop.sadhisha.com/form-handler/Career-enquiry-form.php"
       className="general-enquiry-form"
       encType="multipart/form-data"
     >
